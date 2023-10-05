@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sampling.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+        
+            <li><a href="#section1"> Home</a></li>
+            <li><a href="#section2"> About</a></li>
+            <li><a href="#section3">Contact</a></li>
+        </ul>
+    </div>
+<div class="content" id="section1">
+        <div class="img-container">
+            <img src="photo_2023-10-01_03-01-41.jpg" alt="img">
+        </div>
+        <div class="container1">
+           <div class="typing-effect">
+            <h1>
+               Samardeep Singh.... 
+            </h1>
+           </div>
+         </div>
+         <div class="container2">
+            <p>
+                I am a dedicated and enthusiastic junior year student at VSIT BCA with a passion for computer science and technology. I am eager to join the coding society of VSIT, ACE. To enhance my coding skills and contribute to innovative projects with people from diverse backgrounds of knowledge and expertise. Additionally, I am actively seeking internships to apply my knowledge of Web development and Designing in real-world scenarios to build something meaningful while improving my current skill set. Association of computer enthusiasts would be a perfect opportunity for me to open some doors in my career.
+
+            </p>
+         </div>
+        </div>   
+         <div class="big-container" id="section2">
+            <div class="head">
+            <h1>About</h1>
+            </div>
+            <div class="sub">
+                <h2>
+                    Education
+                </h2> <br>
+                <button id="start-typing-button" class="button">print(Edu)</button>
+            <p id="typewriter-text"> 
+                </p>  
+            </div>
+            <div class="sub2">
+                <h2>
+                    Projects
+                </h2>
+                    <a href="#" class="card">
+                        <img src="Screenshot 2023-10-05 164419.png" alt="placeholder">
+                        <div class="card-text">
+                          NGO Website
+                        </div>
+                        <div class="additional-text"> Working with team for a NGO
+                        </div>
+                      </a>
+                      <a href="#" class="card">
+                        <img src="Screenshot 2023-10-05 173209.png" alt="placeholder">
+                        <div class="card-text">
+                          Fitness Website
+                        </div>
+                        <div class="additional-text"> Create as WT project 1st sem
+                        </div>
+                      </a>
+            </div>
+
+        <div class="sub3">
+            <h2>Skills</h2>
+            <div class="custom-dropdown">
+                <select>
+                    <option value="6">Click here</option>
+                  <option value="1">Web development</option>
+                  <option value="2">PHP</option>
+                  <option value="3">Ui/Ux Designing</option>
+                  <option value="4">Photoshop</option>
+                  <option value="5">Language C</option>
+                  <option value="5">Photography</option> 
+                </select>
+              </div>
+              
+        </div>
+        </div>
+         <div  id="section3" class="big-container2">
+            <section class="contact-section">
+                <div class="contact-container">
+                  <h2>Contact Me</h2>
+                  <form action="#" method="post">
+                    <div class="input-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                      <label for="mobile">Mobile Number</label>
+                      <input type="tel" id="mobile" name="mobile" required>
+                    </div>
+                    <div class="input-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                  </form>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/samar_deep_s" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/samardeep-singh-498830258/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/samar_deep_s" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/samardeeps" target="_blank"><i class="fab fa-github"></i></a>
+                  </div>
+              </section>
+              
+
+         </div>
+        
+
+    <video autoplay muted loop id="video-bg">
+        <source src="Untitled design (5).mp4" type="video/mp4">
+    </video>
+    <script>
+        const startTypingButton = document.getElementById('start-typing-button');
+const textElement = document.getElementById('typewriter-text');
+const textLines = [
+    '<Schooling>',
+    '2019-20  2021-22',
+    '',
+    'S.S. Mota Singh Model School ,',
+    'Pashchim vihar , New Delhi ',
+    '10th - 80%',
+    '12th - 72%(comm. with maths)',
+    '',
+    '<Under Graduation>',
+    '2022-2025',
+    '',
+    'Vivekananda Institute of Professional Studies - TC ',
+    'Bachelors of Computer Applications',
+    ''
+];
+
+let lineIndex = 0;
+let charIndex = 0;
+let typingStarted = false;
+
+function typeText() {
+    if (lineIndex < textLines.length) {
+        if (charIndex < textLines[lineIndex].length) {
+            textElement.textContent += textLines[lineIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, 20); // Adjust typing speed here (in milliseconds)
+        } else {
+            lineIndex++;
+            charIndex = 0;
+            textElement.textContent += '\n'; // Add a line break between lines
+            setTimeout(typeText, 100); // Adjust pause between lines (in milliseconds)
+        }
+    }
+}
+
+startTypingButton.addEventListener('click', () => {
+    if (!typingStarted) {
+        typingStarted = true;
+        startTypingButton.style.display = ''; // Hide the button after starting
+        typeText(); // Start the typewriter effect
+    }
+}); 
+ </script>
+ <script src="https://kit.fontawesome.com/cac054a19a.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
